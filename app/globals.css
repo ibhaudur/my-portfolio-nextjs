@@ -17,11 +17,55 @@
 }
 
 body {
- 
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+@layer components {
+  .active {
+    @apply rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white;
+  }
+  .inactive {
+    @apply rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white;
+  }
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/font/Montserrat-Medium.ttf");
+}
+.banner {
+  background: radial-gradient(
+    759px at 14% 22.3%,
+    rgb(10, 64, 88) 0%,
+    rgb(15, 164, 102) 90%
+  );
+}
+a {
+  text-decoration: none !important;
+}
+#text {
+  text-align: center;
+}
+#bf::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #22c55e;
+  display: inline-block;
+}
+#bf::before {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #22c55e;
+  display: inline-block;
+}
+#bf::before {
+  margin: 0 10px 10px 0;
+}
+#bf::after {
+  margin: 0 0 10px 10px;
 }
