@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Menu = [
   { name: "About", path: "about" },
@@ -36,9 +37,9 @@ const NavHeader = () => {
       }`}
     >
       <nav>
-        <Container className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 lg:py-3">
-          <div className="relative flex h-16 items-center justify-between">
-            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <Container className="mx-auto max-w-7xl px-2 sm:px-6 sm:py-3 lg:px-8 ">
+          <div className="relative flex h-16 items-center justify-between px-2 sm:px-0">
+            <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
               <div className="flex flex-shrink-0 items-center">
                 {/* <img
                   className="h-8 w-auto"
@@ -49,6 +50,7 @@ const NavHeader = () => {
               </div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <RxHamburgerMenu className="sm:hidden text-2xl text-green-500" />
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
                   {Menu.map((item, index) => (
@@ -62,24 +64,6 @@ const NavHeader = () => {
                       {item.name}
                     </Link>
                   ))}
-                  {/* <Link
-                    href="#"
-                    className=""
-                  >
-                    Experience
-                  </Link>
-                  <Link
-                    href="#"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                  >
-                    Education
-                  </Link>
-                  <Link
-                    href="#"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                  >
-                    Contact
-                  </Link> */}
                 </div>
               </div>
             </div>

@@ -14,9 +14,9 @@ const Banner = () => {
   return (
     <div className="bg-gray-800 text-white p-3">
       <Container className="min-h-96 my-5">
-        <Row className="justify-center items-center gap-2">
-          <Col lg={7} className="justify-center">
-            <div className="sm:hidden flex justify-center p-5">
+        <Row className="justify-center items-center gap-0 lg:gap-2">
+          <Col md={6} lg={7} className="justify-center">
+            <div className="md:hidden flex justify-center px-10 py-5">
               <Image
                 className="rounded-full border-solid border-4 border-green-500"
                 src={require("@/public/images/ibhaudur.jpg")}
@@ -24,11 +24,11 @@ const Banner = () => {
               />
             </div>
             <div className="my-4">
-              <p className="text-2xl mb-0">Hello, It's Me</p>
+              <p className="md:text-xl lg:text-2xl mb-0">Hello, It's Me</p>
               <p className="text-4xl font-bold text-orange-500 mb-0">
                 Ibhaudur Rahman
               </p>
-              <p className="text-2xl">
+              <p className="md:text-xl lg:text-xl">
                 And i'm a{" "}
                 <span className="text-green-600">Software Developer</span>
               </p>
@@ -49,8 +49,8 @@ const Banner = () => {
               </div>
             </div>
           </Col>
-          <Col lg={4}>
-            <div className="hidden flex justify-center p-5 sm:block">
+          <Col md={6} lg={4}>
+            <div className="hidden flex justify-center p-5 md:block">
               <Image
                 className="rounded-full border-solid border-4 border-green-500"
                 src={require("@/public/images/ibhaudur.jpg")}
