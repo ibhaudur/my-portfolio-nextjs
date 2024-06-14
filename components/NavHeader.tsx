@@ -32,7 +32,7 @@ const NavHeader = () => {
 
   return (
     <header
-      className={`Header fixed top-0 left-0 right-0 ${
+      className={`Header fixed top-0 left-0 right-0 z-10 ${
         navbar ? "bg-gray-700" : "bg-gray-800"
       }`}
     >

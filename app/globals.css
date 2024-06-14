@@ -69,3 +69,12 @@ a {
 #bf::after {
   margin: 0 0 10px 10px;
 }
+.accordion-button:not(.collapsed) {
+  background-color: #22c55e !important;
+}
+.accordion-button {
+  height: 40px !important;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+}
