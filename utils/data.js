@@ -61,4 +61,10 @@ export const VebboxExperience = [
       "Styled components with Bootstrap and Material-UI.",
     ],
   },
+  {
+    title: "divineyogaforwomen",
+    description: [
+      "Yoga for women , kids and pregancy exclusively and it is developed by React and Hooks",
+    ],
+  },
 ];

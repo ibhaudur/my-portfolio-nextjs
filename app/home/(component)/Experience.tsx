@@ -9,7 +9,7 @@ const Experience = () => {
     <section id="experience">
       <Container className="py-5">
         <Row className="justify-center items-center">
-          <Col md={10} className="mb-3">
+          <Col xs={10} md={10} className="mb-3">
             <Row className="border-1 border-solid border-green-500 p-3 rounded-lg">
               <Col md={2} className="flex items-center">
                 <Image
@@ -50,7 +50,7 @@ const Experience = () => {
                       flush
                     >
                       {KirshiExperience.map((item, index) => (
-                        <Accordion.Item eventKey={index}>
+                        <Accordion.Item eventKey={String(index)} key={index}>
                           <Accordion.Header className="font-semibold">
                             {item.title}
                           </Accordion.Header>
@@ -69,11 +69,11 @@ const Experience = () => {
               </Col>
             </Row>
           </Col>
-          <Col md={10}>
+          <Col xs={10} md={10}>
             <Row className="border-1 border-solid border-green-500 p-3 rounded-lg">
               <Col md={2}>
                 <Image
-                  className="rounded-lg"
+                  className="rounded-lg w-100"
                   src={require("@/public/images/vebbox.jpeg")}
                   alt="i"
                 />
@@ -106,7 +106,7 @@ const Experience = () => {
                       flush
                     >
                       {VebboxExperience.map((item, index) => (
-                        <Accordion.Item eventKey={index}>
+                        <Accordion.Item eventKey={String(index)} key={index}>
                           <Accordion.Header className="font-semibold">
                             {item.title}
                           </Accordion.Header>
