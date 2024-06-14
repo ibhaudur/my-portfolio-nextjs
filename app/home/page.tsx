@@ -3,6 +3,7 @@ import Banner from "./(component)/Banner";
 import Aboutus from "./(component)/Aboutus";
 import Topic from "@/components/Topic";
 import Education from "./(component)/Education";
+import Experience from "./(component)/Experience";
 
 const HomePage = () => {
   return (
@@ -25,6 +26,7 @@ const HomePage = () => {
         con="Professional Journey, Gaining Experience and Expertise"
         i="ab"
       />
+      <Experience />
     </React.Fragment>
   );
 };

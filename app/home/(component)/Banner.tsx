@@ -12,7 +12,7 @@ const Icons = [
 ];
 const Banner = () => {
   return (
-    <div className="bg-gray-800 text-white p-3">
+    <section className="bg-gray-800 text-white p-3">
       <Container className="min-h-96 my-5">
         <Row className="justify-center items-center gap-0 lg:gap-2">
           <Col md={6} lg={7} className="justify-center">
@@ -62,7 +62,7 @@ const Banner = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   );
 };
 
