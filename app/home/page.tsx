@@ -4,6 +4,7 @@ import Aboutus from "./(component)/Aboutus";
 import Topic from "@/components/Topic";
 import Education from "./(component)/Education";
 import Experience from "./(component)/Experience";
+import Contact from "./(component)/Contact";
 
 const HomePage = () => {
   return (
@@ -27,6 +28,12 @@ const HomePage = () => {
         i="ab"
       />
       <Experience />
+      <Topic
+        Head="Contact"
+        con="Professional Journey, Gaining Experience and Expertise"
+        i="ab"
+      />
+      <Contact />
     </React.Fragment>
   );
 };

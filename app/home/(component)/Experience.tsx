@@ -56,8 +56,10 @@ const Experience = () => {
                           </Accordion.Header>
                           <Accordion.Body>
                             <ul className="list-disc">
-                              {item.description.map((item) => (
-                                <li className="mb-2">{item}</li>
+                              {item.description.map((item, i) => (
+                                <li key={i} className="mb-2">
+                                  {item}
+                                </li>
                               ))}
                             </ul>
                           </Accordion.Body>
@@ -112,8 +114,10 @@ const Experience = () => {
                           </Accordion.Header>
                           <Accordion.Body>
                             <ul className="list-disc">
-                              {item.description.map((item) => (
-                                <li className="mb-2">{item}</li>
+                              {item.description.map((item, i) => (
+                                <li key={i} className="mb-2">
+                                  {item}
+                                </li>
                               ))}
                             </ul>
                           </Accordion.Body>
