@@ -1,5 +1,6 @@
 "use client";
 import InputField from "@/components/Fields/InputField";
+import { usePostData } from "@/hooks/useResponsequery";
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -15,11 +16,14 @@ const MyForm: React.FC = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>();
-
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
+  const { mutate: PostEnquiry, data } = usePostData({
+    key: "enquiry",
+    url: "enquiry",
+  });
+  const onSubmit: SubmitHandler<FormValues> = (data: any) => {
+    console.log("sadsad", data);
+    PostEnquiry(data);
   };
-
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <InputField
@@ -41,7 +45,7 @@ const MyForm: React.FC = () => {
         errors={errors}
         type="textarea"
         key_name="description"
-        label="Description"
+        label="Message"
       />
 
       <button

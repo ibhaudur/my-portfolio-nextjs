@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavHeader from "@/components/NavHeader";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import StoreProviders from "./StoreProviders";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,8 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={"font-Montserrat"}>
-        <NavHeader />
-        {children}
+        <StoreProviders>
+          {" "}
+          <NavHeader />
+          <main className="pt-18 sm:pt-20">{children}</main>
+        </StoreProviders>
       </body>
     </html>
   );

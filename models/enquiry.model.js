@@ -13,6 +13,10 @@ const enquiryShema = new Schema({
     type: String,
     required: true,
   },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 const Enquiry =
   mongoose.models.Enquiry || mongoose.model("Enquiry", enquiryShema);
