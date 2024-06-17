@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -9,11 +10,13 @@ const Menu = [
   { name: "Education", path: "education" },
   { name: "Experience", path: "experience" },
   { name: "Contact", path: "contact" },
+  { name: "Admin", path: "/admin" },
 ];
 const NavHeader = () => {
   const [navbar, setNavbar] = useState(false);
   const [active, setActive] = useState("");
-
+  const pathName = usePathname();
+  let pathValidate = pathName?.split("/")?.includes("admin");
   useEffect(() => {
     const changeBackground = () => {
       if (window.scrollY >= 30) {
@@ -29,6 +32,7 @@ const NavHeader = () => {
       window.removeEventListener("scroll", changeBackground);
     };
   }, []);
+  console.log(pathName?.split("/")?.includes("admin"));
 
   return (
     <header
@@ -53,20 +57,29 @@ const NavHeader = () => {
               <RxHamburgerMenu className="sm:hidden text-2xl text-green-500" />
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
-                  {Menu.map((item, index) => (
-                    <Link
-                      href={`#${item.path}`}
-                      key={index}
-                      onClick={() => setActive(item.path)}
-                      className={active === item.path ? "active" : "inactive"}
-                      aria-current="page"
-                    >
-                      {item.name}
+                  {pathValidate ? (
+                    <Link href="/" className="inactive" aria-current="page">
+                      Portfolio
                     </Link>
-                  ))}
-                  {/* <Link href="admin" aria-current="page">
-                    Admin
-                  </Link> */}
+                  ) : (
+                    Menu.map((item, index) => {
+                      return (
+                        <Link
+                          href={
+                            item.name === "Admin" ? item.path : `#${item.path}`
+                          }
+                          key={index}
+                          onClick={() => setActive(item.path)}
+                          className={
+                            active === item.path ? "active" : "inactive"
+                          }
+                          aria-current="page"
+                        >
+                          {item.name}
+                        </Link>
+                      );
+                    })
+                  )}
                 </div>
               </div>
             </div>

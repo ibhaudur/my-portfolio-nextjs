@@ -9,6 +9,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import moment from "moment";
+import { RiDeleteBin5Line } from "react-icons/ri";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -30,7 +31,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-export default function CustomizedTables({ List }: any) {
+export default function CustomizedTables({ List,handleDelete }: any) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -40,6 +41,7 @@ export default function CustomizedTables({ List }: any) {
             <StyledTableCell>Email Id</StyledTableCell>
             <StyledTableCell>Date</StyledTableCell>
             <StyledTableCell>Message</StyledTableCell>
+            <StyledTableCell>Action</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -53,6 +55,9 @@ export default function CustomizedTables({ List }: any) {
                 {moment(row.createdAt).format("MMM Do YYYY, h:mm a")}
               </StyledTableCell>
               <StyledTableCell>{row.description}</StyledTableCell>
+              <StyledTableCell >
+                <RiDeleteBin5Line onClick={() => handleDelete(row._id)} className="text-red-600 cursor-pointer" />
+              </StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

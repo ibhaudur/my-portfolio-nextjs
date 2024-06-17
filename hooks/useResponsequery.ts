@@ -57,3 +57,12 @@ export function usePostFormData({ key, url }: Request) {
     },
   });
 }
+export function useDeleteData({ key, url }: Request) {
+  return useMutation({
+    mutationKey: [key],
+    mutationFn: async (id: String) => {
+      const { data } = await api.delete(`${url}/${id}`);
+      return data;
+    },
+  });
+}

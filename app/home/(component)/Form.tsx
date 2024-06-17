@@ -21,7 +21,6 @@ const MyForm: React.FC = () => {
     url: "enquiry",
   });
   const onSubmit: SubmitHandler<FormValues> = (data: any) => {
-    console.log("sadsad", data);
     PostEnquiry(data);
   };
   return (

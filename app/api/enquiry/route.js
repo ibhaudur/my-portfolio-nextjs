@@ -18,6 +18,14 @@ export const POST = async (req) => {
 };
 export const GET = async () => {
   await connectMangoDB();
-  const enquiry = await Enquiry.find();
-  return NextResponse.json({ enquiry });
+  try {
+    const enquiry = await Enquiry.find();
+    return NextResponse.json({ enquiry }, { status: 200 });
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json(
+      { message: "Failed to fetch enquiries. Please try again later." },
+      { status: 500 }
+    );
+  }
 };
