@@ -13,6 +13,8 @@ const Education = () => {
                 className="rounded-lg"
                 src={require("@/public/images/mgr.jpg")}
                 alt="i"
+                width={400}
+                height={400}
               />
               <div className="p-2">
                 <h5>Dr.MGR University</h5>
@@ -31,12 +33,16 @@ const Education = () => {
             <div className="rounded-lg border-solid border-2 border-green-500 h-100">
               <Image
                 className="rounded-lg"
-                src={require("@/public/images/jam.jpg")}
+                src={require("@/public/images/jam.png")}
                 alt="i"
+                width={400}
+                height={400}
               />
               <div className="p-2">
                 <h5>Jamal Mohammed College</h5>
-                <p className="text-xs">Bachelor of Computer Applications (BCA)</p>
+                <p className="text-xs">
+                  Bachelor of Computer Applications (BCA)
+                </p>
                 <p className="text-sm">
                   Jamal Mohamed College, an autonomous institution founded in
                   1951 and affiliated with Bharathidasan University,
@@ -53,6 +59,8 @@ const Education = () => {
                 className="rounded-lg"
                 src={require("@/public/images/vb.jpg")}
                 alt="i"
+                width={400}
+                height={400}
               />
               <div className="p-2">
                 <h5>VEBBOX Software Solutions</h5>

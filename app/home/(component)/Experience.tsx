@@ -11,14 +11,14 @@ const Experience = () => {
         <Row className="justify-center items-center">
           <Col xs={10} md={10} className="mb-3">
             <Row className="border-1 border-solid border-green-500 p-3 rounded-lg">
-              <Col md={2} className="flex items-center">
+              <Col sm={4} md={2} className="flex items-center">
                 <Image
-                  className="rounded-lg w-100"
+                  className="rounded-lg w-100 py-3"
                   src={require("@/public/images/kirshi.jpeg")}
                   alt="i"
                 />
               </Col>
-              <Col md={9}>
+              <Col sm={8} md={9}>
                 <div className="py-3">
                   <h4 className="font-bold">
                     KIRSHI TECHNOLOGIES AND CONSULTING Pvt. Ltd.
@@ -75,7 +75,7 @@ const Experience = () => {
             <Row className="border-1 border-solid border-green-500 p-3 rounded-lg">
               <Col md={2}>
                 <Image
-                  className="rounded-lg w-100"
+                  className="rounded-lg w-100 py-3"
                   src={require("@/public/images/vebbox.jpeg")}
                   alt="i"
                 />
