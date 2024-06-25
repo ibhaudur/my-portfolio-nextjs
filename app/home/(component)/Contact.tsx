@@ -18,7 +18,7 @@ const Contact = () => {
     <footer id="contact" className="bg-slate-800 py-4">
       <Container>
         <Row className="justify-center">
-          <Col md={4} className="text-white py-3">
+          <Col md={12} lg={4} className="text-white py-3">
             <div>
               <p className="text-3xl">Portfolio</p>
               <p>
@@ -34,7 +34,7 @@ const Contact = () => {
               </div>
             </div>
           </Col>
-          <Col md={4} className="text-white py-3">
+          <Col md={6} lg={4} className="text-white py-3">
             <div>
               <p className="text-2xl underline">Contact</p>
               <div className="flex gap-2">
@@ -55,7 +55,8 @@ const Contact = () => {
               </div>
             </div>
           </Col>
-          <Col md={4}>
+          <Col md={6} lg={4} className="py-3">
+            <p className="text-2xl underline text-white">Mail Me</p>
             <Form />
           </Col>
         </Row>

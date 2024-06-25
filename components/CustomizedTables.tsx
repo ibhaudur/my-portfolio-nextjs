@@ -31,7 +31,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-export default function CustomizedTables({ List,handleDelete }: any) {
+export default function CustomizedTables({ List, handleDelete }: any) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -55,13 +55,23 @@ export default function CustomizedTables({ List,handleDelete }: any) {
                 {moment(row.createdAt).format("MMM Do YYYY, h:mm a")}
               </StyledTableCell>
               <StyledTableCell>{row.description}</StyledTableCell>
-              <StyledTableCell >
-                <RiDeleteBin5Line onClick={() => handleDelete(row._id)} className="text-red-600 cursor-pointer" />
+              <StyledTableCell>
+                <RiDeleteBin5Line
+                  onClick={() =>
+                    handleDelete(
+                      "Are you sure you want to Delete?",
+                      true,
+                      row._id
+                    )
+                  }
+                  className="text-red-600 cursor-pointer"
+                />
               </StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
       </Table>
+      {List?.length === 0 ? <p className="text-center my-2">No Results Found!</p> : ""}
     </TableContainer>
   );
 }

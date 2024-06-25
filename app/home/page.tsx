@@ -30,7 +30,7 @@ const HomePage = () => {
       <Experience />
       <Topic
         Head="Contact"
-        con="Professional Journey, Gaining Experience and Expertise"
+        con="For inquiries and support"
         i="ab"
       />
       <Contact />

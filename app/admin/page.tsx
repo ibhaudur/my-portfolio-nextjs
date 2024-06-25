@@ -1,17 +1,28 @@
 "use client";
-import CustomizedTables from "@/components/CustomizedTables";
-import { useDeleteData, useFetchData } from "@/hooks/useResponsequery";
 import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
+import AlertDialog from "@/components/Alert/AlertDialog";
+import Toast from "@/components/Alert/Toast";
+import CustomizedTables from "@/components/CustomizedTables";
+import useDeleteBox from "@/hooks/useDeleteBox";
+import { useDeleteData, useFetchData } from "@/hooks/useResponsequery";
+import useSnackbar from "@/hooks/useSnackbar";
 
 const Admin = () => {
+  const { open, message, openDelete, deleteId } = useDeleteBox();
+  const {
+    open: openSnack,
+    message: snackMessage,
+    openSnackBar,
+    type,
+  } = useSnackbar();
   const { data: enquiryList, refetch } = useFetchData({
     key: "enquiry",
     url: "enquiry",
   });
+
   const {
-    mutate: DeleteEnquiry,
-    data,
+    mutate: deleteEnquiry,
     isSuccess,
     isError,
     error,
@@ -19,24 +30,35 @@ const Admin = () => {
     key: "enquiry",
     url: "enquiry",
   });
+
   useEffect(() => {
     if (isSuccess) {
       refetch();
+      openSnackBar("Deleted Successfully!", "success");
     } else if (isError) {
-      console.log(error);
+      console.error(error);
+      openSnackBar("Retry!", "error");
     }
   }, [isSuccess, isError]);
 
-  const HandleDelete = (id: String) => {
-    DeleteEnquiry(id);
+  const handleDelete = (confirm: boolean) => {
+    if (confirm) {
+      deleteEnquiry(deleteId);
+    }
+    openDelete("", false, null);
   };
+
   return (
     <Container className="py-5">
-      <p className="text-3xl">Mail List</p>
-      <CustomizedTables
-        List={enquiryList?.enquiry}
-        handleDelete={HandleDelete}
+      <AlertDialog
+        title="Delete Confirmation"
+        open={open}
+        message={message}
+        deleteBranches={handleDelete}
       />
+      <Toast open={openSnack} message={snackMessage} type={type} />
+      <p className="text-3xl mt-5 sm:mt-0 md:mt-0">Mail List</p>
+      <CustomizedTables List={enquiryList?.enquiry} handleDelete={openDelete} />
     </Container>
   );
 };

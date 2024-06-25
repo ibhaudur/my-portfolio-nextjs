@@ -7,7 +7,7 @@ const Education = () => {
     <section id="education" className="bg-gray-800 text-white">
       <Container className="py-5">
         <Row className="justify-center">
-          <Col lg={4} md={8} sm={8} xs={10}>
+          <Col className="mb-3" lg={4} md={6} sm={8} xs={10}>
             <div className="rounded-lg border-solid border-2 border-green-500 h-100">
               <Image
                 className="rounded-lg"
@@ -29,7 +29,7 @@ const Education = () => {
               </div>
             </div>
           </Col>
-          <Col lg={4} md={8} sm={8} xs={10}>
+          <Col className="mb-3" lg={4} md={6} sm={8} xs={10}>
             <div className="rounded-lg border-solid border-2 border-green-500 h-100">
               <Image
                 className="rounded-lg"
@@ -53,7 +53,7 @@ const Education = () => {
               </div>
             </div>
           </Col>
-          <Col lg={4} md={8} sm={8} xs={10}>
+          <Col className="mb-3" lg={4} md={6} sm={8} xs={10}>
             <div className="rounded-lg border-solid border-2 border-green-500 h-100">
               <Image
                 className="rounded-lg"
