@@ -7,6 +7,7 @@ import CustomizedTables from "@/components/CustomizedTables";
 import useDeleteBox from "@/hooks/useDeleteBox";
 import { useDeleteData, useFetchData } from "@/hooks/useResponsequery";
 import useSnackbar from "@/hooks/useSnackbar";
+import BackdropLoader from "@/components/UI/BackdropLoader";
 
 const Admin = () => {
   const { open, message, openDelete, deleteId } = useDeleteBox();
@@ -26,6 +27,7 @@ const Admin = () => {
     isSuccess,
     isError,
     error,
+    isPending,
   } = useDeleteData({
     key: "enquiry",
     url: "enquiry",
@@ -45,11 +47,12 @@ const Admin = () => {
     if (confirm) {
       deleteEnquiry(deleteId);
     }
-    openDelete("", false, null);
+    openDelete("", false, "");
   };
 
   return (
     <Container className="py-5">
+      <BackdropLoader loader={isPending} />
       <AlertDialog
         title="Delete Confirmation"
         open={open}

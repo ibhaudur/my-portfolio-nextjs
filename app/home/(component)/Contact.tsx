@@ -1,18 +1,12 @@
+"use client";
 import React from "react";
 import Form from "./Form";
 import { Col, Container, Row } from "react-bootstrap";
-import { CiFacebook } from "react-icons/ci";
-import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiPhoneLine } from "react-icons/ri";
+import { Icons } from "../utils/data";
 
-const Icons = [
-  { tag: FaLinkedin },
-  { tag: FaWhatsapp },
-  { tag: FaInstagram },
-  { tag: CiFacebook },
-];
 const Contact = () => {
   return (
     <footer id="contact" className="bg-slate-800 py-4">
@@ -28,8 +22,13 @@ const Contact = () => {
                 advantage to customers around the globe.
               </p>
               <div className="flex gap-2">
-                {Icons.map((item) => (
-                  <item.tag className="text-2xl text-green-500 cursor-pointer hover:text-white" />
+                {Icons.map((item, index) => (
+                  <span
+                    key={index}
+                    onClick={() => window.open(item.link, "_blank")}
+                  >
+                    <item.tag className="text-2xl text-green-500 cursor-pointer hover:text-white" />
+                  </span>
                 ))}
               </div>
             </div>

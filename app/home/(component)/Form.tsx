@@ -5,6 +5,7 @@ import { useFetchData, usePostData } from "@/hooks/useResponsequery";
 import useSnackbar from "@/hooks/useSnackbar";
 import React, { useEffect } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import BackdropLoader from "@/components/UI/BackdropLoader";
 
 interface FormValues {
   name: String;
@@ -27,6 +28,7 @@ const MyForm: React.FC = () => {
     mutate: PostEnquiry,
     data,
     isSuccess,
+    isPending,
     isError,
   } = usePostData({
     key: "enquiry",
@@ -44,6 +46,7 @@ const MyForm: React.FC = () => {
   }, [isSuccess, isError]);
   return (
     <React.Fragment>
+      <BackdropLoader loader={isPending} />
       <Toast open={open} message={message} type={type} />
       <form onSubmit={handleSubmit(onSubmit)}>
         <InputField

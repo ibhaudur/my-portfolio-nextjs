@@ -12,15 +12,15 @@ interface UseDeleteBoxReturn {
   open: boolean;
   message: string;
   openDelete: (msg: string, bool: boolean, id: string) => void;
-  deleteId: string | null;
+  deleteId: any;
 }
 
 export default function useDeleteBox(): UseDeleteBoxReturn {
   const [open, setOpen] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
-  const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [deleteId, setDeleteId] = useState<any>(null);
 
-  const openDelete = (msg: string, bool: boolean, id: string): void => {
+  const openDelete = (msg: string, bool: boolean, id: any): void => {
     setMessage(msg);
     setOpen(bool);
     setDeleteId(id);

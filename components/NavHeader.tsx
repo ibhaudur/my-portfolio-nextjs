@@ -50,7 +50,7 @@ const NavHeader = () => {
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                   alt="Your Company"
                 /> */}
-                <h3 className="text-orange-500">IRB</h3>
+                <h3 className="text-orange-500">Portfolio</h3>
               </div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">

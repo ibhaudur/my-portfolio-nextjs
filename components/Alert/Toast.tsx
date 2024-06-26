@@ -5,7 +5,7 @@ import MuiAlert, { AlertProps } from "@mui/material/Alert";
 
 interface ToastTypes {
   open: boolean;
-  type: "success" | "info" | "warning" | "error";
+  type: any;
   message: string;
 }
 

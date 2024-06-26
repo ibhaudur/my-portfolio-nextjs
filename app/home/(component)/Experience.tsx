@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
 import { KirshiExperience, VebboxExperience } from "@/utils/data";
+import Skills from "./Skills";
 const Experience = () => {
   const [view, setView] = useState<String>("");
   return (
@@ -128,6 +129,9 @@ const Experience = () => {
                 </div>
               </Col>
             </Row>
+          </Col>
+          <Col md={10} lg={8}>
+            <Skills />
           </Col>
         </Row>
       </Container>
