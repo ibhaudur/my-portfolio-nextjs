@@ -10,7 +10,7 @@ const Menu = [
   { name: "Education", path: "education" },
   { name: "Experience", path: "experience" },
   { name: "Contact", path: "contact" },
-  { name: "Admin", path: "/admin" },
+  // { name: "Admin", path: "/admin" },
 ];
 const NavHeader = () => {
   const [navbar, setNavbar] = useState(false);
