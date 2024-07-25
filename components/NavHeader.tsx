@@ -32,8 +32,6 @@ const NavHeader = () => {
       window.removeEventListener("scroll", changeBackground);
     };
   }, []);
-  console.log(pathName?.split("/")?.includes("admin"));
-
   return (
     <header
       className={`Header fixed top-0 left-0 right-0 z-10 ${

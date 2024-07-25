@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Experience } from "../utils/data";
 
 const Aboutus = () => {
   return (
@@ -11,7 +12,7 @@ const Aboutus = () => {
             <p>
               I am Ibhaudur Rahman, a software developer with expertise in both
               front-end and back-end technologies. I have
-              <strong> 2.5 years of experience</strong>
+              <strong> {Experience()} years of experience</strong>
               in front-end development using
               <strong>
                 {" "}

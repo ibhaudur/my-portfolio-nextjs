@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Icons } from "../utils/data";
+import { Experience, Icons } from "../utils/data";
 
 const Banner = () => {
   return (
@@ -20,7 +20,9 @@ const Banner = () => {
               />
             </div>
             <div className="my-4 text-center">
-              <p className="md:text-xl lg:text-2xl mb-0 md:text-left">Hello, It's Me</p>
+              <p className="md:text-xl lg:text-2xl mb-0 md:text-left">
+                Hello, It's Me
+              </p>
               <p className="text-4xl font-bold text-orange-500 mb-0 md:text-left">
                 Ibhaudur Rahman
               </p>
@@ -29,9 +31,10 @@ const Banner = () => {
                 <span className="text-green-600">Software Developer</span>
               </p>
               <p className="md:text-left">
-                I am a front-end developer with 2.5 years of experience in
-                React.js, Redux, Next.js, and Tailwind CSS. I also work with
-                Node.js, Express, and MongoDB to build dynamic web applications.
+                I am a front-end developer with {Experience()} years of
+                experience in React.js, Redux, Next.js, and Tailwind CSS. I also
+                work with Node.js, Express, and MongoDB to build dynamic web
+                applications.
               </p>
               <div className="flex justify-center md:justify-start gap-2">
                 {Icons.map((item, index) => (
