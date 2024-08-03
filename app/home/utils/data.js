@@ -22,14 +22,25 @@ export const Icons = [
 
 export const Experience = () => {
   const currentDate = new Date();
-  const pastDate = new Date("01-02-2022");
-  const differenceInMilliseconds = currentDate - pastDate;
-  const differenceInDays = differenceInMilliseconds / (1000 * 60 * 60 * 24);
-  let differenceInYears = differenceInDays / 365;
-  if (differenceInDays < 30) {
-    differenceInYears = 0.1;
-  } else {
-    differenceInYears = Number(differenceInYears.toFixed(1));
+  const pastDate = new Date("2022-02"); // YYYY-MM format
+
+  // Calculate year and month differences
+  const yearsDifference = currentDate.getFullYear() - pastDate.getFullYear();
+  const monthsDifference = currentDate.getMonth() - pastDate.getMonth() + 1;
+
+  // Total experience in months
+  let totalMonths = yearsDifference * 12 + monthsDifference;
+
+  // Convert months to years and months
+  const experienceInYears = Math.floor(totalMonths / 12);
+  const experienceInMonths = totalMonths % 12;
+
+  // Format as "X years Y months"
+  let experienceString = `${experienceInYears}`;
+
+  if (experienceInMonths > 0) {
+    experienceString += `.${experienceInMonths}`;
   }
-  return differenceInYears;
+
+  return experienceString;
 };
