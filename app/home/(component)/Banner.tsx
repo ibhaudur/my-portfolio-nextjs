@@ -6,7 +6,7 @@ import { Experience, Icons } from "../utils/data";
 
 const Banner = () => {
   return (
-    <section className="bg-gray-800 text-white p-3">
+    <section className="content  max-md:bg-neutral-950 text-white p-3">
       <Container className="min-h-96 my-5">
         <Row className="justify-center items-center gap-0 lg:gap-2">
           <Col md={6} lg={7} className="justify-center">
@@ -27,8 +27,8 @@ const Banner = () => {
                 Ibhaudur Rahman
               </p>
               <p className="md:text-xl lg:text-xl md:text-left">
-                And I'm a{" "}
-                <span className="text-green-600">Software Developer</span>
+                And I'm a{" "} 
+                <span className="text-green-600 role"></span>
               </p>
               <p className="md:text-left">
                 I am a front-end developer with {Experience()} years of
@@ -69,6 +69,14 @@ const Banner = () => {
             </div>
           </Col>
         </Row>
+        <div className="wave-container">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              className="wave"
+              d="M0,96 C320,160 480,0 1200,96 L1200,00 L0,0 Z"
+            ></path>
+          </svg>
+        </div>
       </Container>
     </section>
   );
