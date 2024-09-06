@@ -18,7 +18,10 @@ const Education = () => {
               />
               <div className="p-2">
                 <h5>Dr.MGR University</h5>
-                <p className="text-xs">Master of Computer Applications (MCA)</p>
+                <p className="text-xs mb-0">
+                  Master of Computer Applications (MCA)
+                </p>
+                <p className="text-xs font-bold text-green-500">CGPA - 7.9</p>
                 <p className="text-sm">
                   Dr. M.G.R. Engineering College, founded in 1988, acquired
                   Deemed University status in 2003 as Dr. M.G.R. Educational and
@@ -40,9 +43,10 @@ const Education = () => {
               />
               <div className="p-2">
                 <h5>Jamal Mohammed College</h5>
-                <p className="text-xs">
+                <p className="text-xs mb-0">
                   Bachelor of Computer Applications (BCA)
                 </p>
+                <p className="text-xs font-bold text-green-500">CGPA - 7.3</p>
                 <p className="text-sm">
                   Jamal Mohamed College, an autonomous institution founded in
                   1951 and affiliated with Bharathidasan University,
