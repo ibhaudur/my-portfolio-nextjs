@@ -22,7 +22,7 @@ export const Icons = [
 
 export const Experience = () => {
   const currentDate = new Date();
-  const pastDate = new Date("2022-02"); // YYYY-MM format
+  const pastDate = new Date("2021-09"); // YYYY-MM format
 
   // Calculate year and month differences
   const yearsDifference = currentDate.getFullYear() - pastDate.getFullYear();
