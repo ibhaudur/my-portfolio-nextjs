@@ -124,7 +124,17 @@ a {
 .wave {
   fill: #1f2937; /* Wave color */
 }
-
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  border-radius: 20px;
+  background: #16a34a !important;
+  transform-origin: 0%;
+  z-index: 9999;
+}
 .content {
   position: relative;
   z-index: 10;
