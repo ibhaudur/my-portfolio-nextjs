@@ -46,7 +46,7 @@ const Education = () => {
                 <p className="text-xs mb-0">
                   Bachelor of Computer Applications (BCA)
                 </p>
-                <p className="text-xs font-bold text-green-500">CGPA - 7.3</p>
+                <p className="text-xs font-bold text-green-500">CGPA - 7.4</p>
                 <p className="text-sm">
                   Jamal Mohamed College, an autonomous institution founded in
                   1951 and affiliated with Bharathidasan University,
