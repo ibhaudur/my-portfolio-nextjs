@@ -25,7 +25,7 @@ const Experience = () => {
                     KIRSHI TECHNOLOGIES AND CONSULTING Pvt. Ltd.
                   </h4>
                   <p className="mb-3">
-                    2022 - Present | Associate Software Developer
+                   Feb, 2022 - Feb, 2025 | Associate Software Developer
                   </p>
                   <button
                     className={`border-solid border-1  ${
@@ -84,7 +84,7 @@ const Experience = () => {
               <Col md={9}>
                 <div className="py-3">
                   <h4 className="font-bold">Vebbox software solutions</h4>
-                  <p className="mb-3">2021 - 2022 | Internship</p>
+                  <p className="mb-3">Sep, 2021 - Feb, 2022 | Internship</p>
                   <button
                     className={`border-solid border-1  ${
                       view === "vebbox"
