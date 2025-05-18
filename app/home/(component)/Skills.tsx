@@ -11,7 +11,10 @@ import NodeJs from "@/public/images/technologies/node-js.svg";
 import Express from "@/public/images/technologies/express.svg";
 import MongoDb from "@/public/images/technologies/mongo.svg";
 import GitHub from "@/public/images/technologies/github.svg";
-
+import AWS from "@/public/images/technologies/AWS.svg";
+import Ts from "@/public/images/technologies/ts.svg";
+import Docker from "@/public/images/technologies/docker.svg";
+import SQL from "@/public/images/technologies/sql.svg";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
 
@@ -19,6 +22,7 @@ const languages_and_Framework = [
   { image: Html5, name: "Html5" },
   { image: CSS3, name: "CSS3" },
   { image: JavaScript, name: "JavaScript" },
+  { image: Ts, name: "TypeScript" },
   { image: ReactJs, name: "React Js" },
   { image: NextJs, name: "Next Js" },
   { image: NodeJs, name: "Node Js" },
@@ -28,6 +32,9 @@ const languages_and_Framework = [
   { image: MaterialUi, name: "MaterialUi" },
   { image: TailwindCss, name: "TailwindCss" },
   { image: GitHub, name: "GitHub" },
+  { image: AWS, name: "AWS" },
+  { image: Docker, name: "Docker" },
+  { image: SQL, name: "MySQL" },
 ];
 
 const Skills = () => {

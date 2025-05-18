@@ -27,14 +27,14 @@ const Banner = () => {
                 Ibhaudur Rahman
               </p>
               <p className="md:text-xl lg:text-xl md:text-left">
-                And I'm a{" "} 
-                <span className="text-green-600 role"></span>
+                And I'm a <span className="text-green-600 role"></span>
               </p>
               <p className="md:text-left">
-                I am a front-end developer with {Experience()} years of
-                experience in React.js, Redux, Next.js, and Tailwind CSS. I also
-                work with Node.js, Express, and MongoDB to build dynamic web
-                applications.
+                I’m a FullStack developer with {Experience()} years of hands-on
+                experience building dynamic web applications. My toolkit
+                includes React.js, Redux, Next.js, Tailwind CSS, TypeScript,
+                Node.js, Express, and MongoDB, and I’m comfortable working with
+                AWS, Git, security best practices, and caching strategies.
               </p>
               <div className="flex justify-center md:justify-start gap-2">
                 {Icons.map((item, index) => (
@@ -61,7 +61,7 @@ const Banner = () => {
             <div className="hidden md:flex justify-center p-5">
               <Image
                 className="rounded-full border-solid border-4 border-green-500"
-                src="/images/ibhaudur.jpg"
+                src="/images/ibhaudur1.jpeg"
                 width={300}
                 height={300}
                 alt="Ibhaudur Rahman"

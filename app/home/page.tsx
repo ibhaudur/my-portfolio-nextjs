@@ -12,7 +12,7 @@ const HomePage = () => {
       <Banner />
       <Topic
         Head="About"
-        con="Experienced Front-End Developer with Full-Stack Capabilities"
+        con="Experienced with FullStack Capabilities"
         i="ab"
       />
       <Aboutus />

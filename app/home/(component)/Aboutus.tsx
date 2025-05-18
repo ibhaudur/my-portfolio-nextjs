@@ -10,17 +10,25 @@ const Aboutus = () => {
         <Col md={10}>
           <div className="leading-loose">
             <p>
-              I am Ibhaudur Rahman, a software developer with expertise in both
-              front-end and back-end technologies. I have
-              <strong> {Experience()} years of experience </strong>
-              in front-end development using
+              I am <strong>Ibhaudur Rahman</strong>, a{" "}
+              <strong>FullStack Developer</strong> with{" "}
+              <strong>{Experience()} years</strong> of professional experience.
+              On the front end, I craft fast, accessible interfaces with{" "}
               <strong>
-                {" "}
-                React.js, Redux, Next.js, Bootstrap, Material UI and Tailwind
-                CSS.
+                React.js, Redux-toolkit, Next.js, Tailwind&nbsp;CSS, Bootstrap,
+                Material&nbsp;UI, Formik,
               </strong>{" "}
-              Additionally, I am proficient in back-end development with
-              <strong> Node.js, Express, and MongoDB. </strong>
+              and core <strong>JavaScript</strong>. On the back end, I build
+              secure, scalable APIs using{" "}
+              <strong>Node.js, Express, MongoDB,</strong> and{" "}
+              <strong>SQL&nbsp;databases</strong>. My toolkit also includes{" "}
+              <strong>
+                Docker, AWS, Git, TypeScript, caching strategies, AES
+                encryption,
+              </strong>{" "}
+              and <strong>web-security best practices</strong>, enabling me to
+              deliver polished, containerized, cloud-ready applications end to
+              end.{" "}
             </p>
             <p>
               I hold a{" "}
@@ -36,7 +44,7 @@ const Aboutus = () => {
             </p>
             <p>
               Furthermore, I have completed a{" "}
-              <strong>full-stack development course</strong> at Vebbox Software
+              <strong>FullStack development course</strong> at Vebbox Software
               Solution, which has enriched my understanding and skills in
               building comprehensive web applications.
             </p>
